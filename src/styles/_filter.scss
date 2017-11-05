@@ -1,0 +1,38 @@
+.filter {
+  background: $green;
+  width: 100%;
+  display: flex;
+  margin: 0 0 20px 0;
+  .select {
+    padding: 14px 18px;
+    font-size: 14px;
+    border-right: 1px solid #090909;
+  }
+  .search {
+    margin-left: auto;
+    label {
+      display: block;
+      height: 100%;
+      background: $dark-green;
+      padding: 0 10px;
+    }
+    input {
+      border: 0;
+      height: 100%;
+      padding: 0 6px;
+      background: none;
+      &:focus {
+        outline: none;
+      }
+    }
+    .fa-search, input {
+      color: #fff;
+    }
+    input:-moz-placeholder, textarea:-moz-placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+  }
+}

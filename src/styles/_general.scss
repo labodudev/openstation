@@ -1,0 +1,44 @@
+/*****************
+ * GLOBAL CONFIG *
+ ****************/
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background: #090909;
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+h2 {
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+a {
+  text-decoration: none;
+}
+.avatar {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  max-width: 40px;
+  &.min {
+    max-width: 26px
+  }
+}
+#main-content {
+  padding: 30px 30px 30px 250px;
+  .entry-content {
+    margin: 20px 0;
+    color: rgba(255,255,255,0.6);
+  }
+}

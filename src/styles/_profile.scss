@@ -1,0 +1,36 @@
+.avatar-container.profile {
+  width: 50px;
+  height: 50px;
+}
+
+.profile {
+
+  .player {
+    margin-bottom: 16px;
+    &:after {
+      @include clear();
+    }
+    > * {
+      line-height: 1.2;
+    }
+    .title {
+      font-family: 'Orbitron', sans-serif;
+    }
+    p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      padding-bottom: 4px;
+    }
+    a {
+      color: $green;
+      font-size: 14px;
+      i {
+        margin-right: 6px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+}

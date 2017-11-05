@@ -1,0 +1,44 @@
+#main-content {  
+  .new-project-list {
+    display: flex;
+    border: 1px dashed rgba(255,255,255,0.2);
+    height: 100px;
+    @include transition();
+    span {
+      color: rgba(255,255,255,0.2);
+      text-transform: uppercase;
+      font-size: 18px;
+      @include transition();
+      font-weight: 700;
+      i {
+        padding-right: 8px;
+      }
+    }
+    > * {
+      margin: auto;
+    }
+    &:hover {
+      cursor: pointer;
+      border: 1px dashed rgba(255,255,255,0.4);
+      span {
+        color: rgba(255,255,255,0.4);
+      }
+    }
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .stat {
+    li {
+      padding: 6px 6px;
+      span:first-child {
+        font-size: 26px;
+        padding-right: 10px;
+      }
+      span:last-child {
+        font-size: 14px;
+        color: rgba(255,255,255,0.4);
+      }
+    }
+  }
+}

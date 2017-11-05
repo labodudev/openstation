@@ -1,0 +1,42 @@
+.comment-list {
+  clear: both;
+  .comment {
+    margin-bottom: 20px;
+    .info {
+      display: flex;
+      flex-direction: row;
+      > * {
+        margin: auto 0;
+      }
+    }
+    .author {
+      display: flex;
+      flex-direction: row;
+      img {
+        max-height: 40px;
+      }
+      .author-info {
+        margin: auto 10px;
+        > * {
+          display: block;
+        }
+        .pseudo {
+          color: $green;
+          padding: 4px 0;
+          font-weight: 600;
+        }
+        .date {
+          color: rgba(255,255,255,0.3);
+        }
+      }
+    }
+    .like {
+        text-align: right;
+        margin-left: auto;
+    }
+    .comment-content {
+        margin-top: 10px;
+        color: rgba(255,255,255,0.6);
+    }
+  }
+}

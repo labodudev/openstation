@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>OpenStation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/notification.css">
+  </head>
+
+  <body>
+    <header id="main-header">
+      <div class="logo"><img src="./../../assets/img/openstation-logo.png" alt="Logo Optenstation" /></div>
+			<nav class="main-navigation">
+			  <ul>
+			    <li class="active"><a class="load-page menu-link" data-name="home">Home</a></li>
+			    <li _AUTH><a class="load-page menu-link" data-name="game" data-controller="my-games">My Games</a></li>
+			    <li _AUTH><a class="load-page menu-link" data-name="dashboard">Dashboard</a></li>
+			    <li _NO_AUTH><a class="load-page menu-link" data-name="authentification" data-controller="login">Login</a></li>
+			    <li _NO_AUTH><a class="load-page menu-link" data-name="authentification" data-controller="subscribe">Subscribe</a></li>
+			    <li _AUTH><a class="load-page menu-link" data-name="admin" data-controller="admin">Admin</a></li>
+			  </ul>
+			</nav>
+
+			<div class="footer">
+			  <div _AUTH class="user"><a href="#" class="pseudo load-page" data-name="profile"><img src="./../../assets/img/avatar-chat.jpg" class="avatar min" alt="Avatar"><span>_USER_DISPLAYNAME<i class="fa fa-caret-down"></i></span></a><a href="#" class="friend button-popup"><i class="fa fa-users"></i></a></div>
+			  <div class="information">
+			    <ul class="reseau">
+			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			    </ul>
+			    <p class="copyright">OpenStation, @copyright 2016</p>
+			  </div>
+			</div>
+
+    </header>
+
+    <ul id="notification-container"></ul>
+		<div id="main-content" class="content">test</div>
+
+		</body>
+	</html>

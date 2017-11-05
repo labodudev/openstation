@@ -1,0 +1,26 @@
+/*****************
+ * STYLES IMPORT *
+ ****************/
+@import '_reset';
+@import '_variables';
+@import 'scss/font-awesome';
+@import '_mixins';
+@import '_toolbox';
+@import '_general';
+@import '_header';
+@import '_popup';
+@import '_filter';
+@import '_tab';
+@import '_dashboard';
+@import '_game';
+@import '_form';
+@import '_friend';
+@import '_comment';
+@import '_table';
+@import '_profile';
+
+/*************
+ * FONTS *
+ *************/
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i);

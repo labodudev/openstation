@@ -1,0 +1,279 @@
+.game {
+  /* LIST DISPLAYING (DASHBOARD) */
+  &.list {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 14px;
+    @include transition();
+    height: 102px;
+    .thumbnail {
+      width: 100%;
+      max-width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+      float: left;
+      margin-right: 16px;
+      img {
+        width: auto;
+        height: 100%;
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+    }
+    .content {
+      padding: 16px 16px 16px 0;
+    }
+    .title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .description {
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+    }
+    .like {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 14px;
+      color: $red;
+      i {
+        padding-right: 6px;
+      }
+    }
+    .shortcut {
+      padding: 14px 0 10px 0;
+      li {
+        float: left;
+        a {
+          color: $green;
+          padding: 0 6px;
+          text-decoration: none;
+          font-size: 14px;
+          i {
+            padding-right: 4px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .title, .description {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+  }
+
+  /* GRID DISPLAYING (ALL GAMES) */
+  &.grid {
+    padding: 10px;
+    @include transition();
+    .container {
+      position: relative;
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.1);
+      overflow: hidden;
+      &:hover {
+        border: 1px solid rgba(255,255,255,0.2);
+        cursor: pointer;
+      }
+    }
+    .thumbnail {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      .image, .gif {
+        @include transition();
+        min-width: 100%;
+        min-height: 240px;
+        position:absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+      .image {
+        z-index: 2;
+      }
+      .gif {
+        z-index: 1;
+      }
+    }
+    &:not(.no-gif) {
+      &:hover {
+        .thumbnail {
+          .image {
+            opacity: 0;
+            top: -20px;
+          }
+        }
+        .content {
+          bottom: -20px;
+          opacity: 0;
+        }
+      }
+    }
+    .content {
+      @include transition();
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 3;
+      padding: 10px;
+      .title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 6px;
+        float: left;
+        width: 80%;
+      }
+      .price {
+        float: right;
+        width: 20%;
+        color: $green;
+        font-weight: bold;
+        text-align: right;
+      }
+      .description {
+        clear: both;
+        width: 100%;
+        font-size: 14px;
+      }
+      .title, .price, .description {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  /* SINGLE DISPLAYING (SINGLE GAME) */
+  &.single {
+      padding: 10%;
+      .cover-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-left: 220px;
+      width: 100%;
+      z-index: -1;
+      .background-cover {
+        display: block;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#090909+30,090909+75&0+31,1+75 */
+        background: -moz-linear-gradient(top,  rgba(9,9,9,0) 30%, rgba(9,9,9,0) 31%, rgba(9,9,9,1) 75%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(9,9,9,0) 30%,rgba(9,9,9,0) 31%,rgba(9,9,9,1) 75%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(9,9,9,0) 30%,rgba(9,9,9,0) 31%,rgba(9,9,9,1) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00090909', endColorstr='#090909',GradientType=0 ); /* IE6-9 */
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .share-container {
+      text-align: right;
+      padding: 10px 0;
+    }
+    .header-game {
+      margin-bottom: 30px;
+      header {
+        width: 70%;
+        .title {
+          margin: 0;
+          padding-bottom: 4px;
+        }
+        .updated {
+          color: $green;
+          .username {
+            color: #fff;
+          }
+        }
+      }
+      .play-game {
+        width: 30%;
+      }
+    }
+    .game-container {
+      background: #090909;
+      width: 100%;
+      height: 520px;
+      margin: auto;
+      border: 4px solid #090909;
+    }
+    .game-main-content {
+      .content {
+        width: 70%;
+        min-height: 1px;
+        line-height: 1.4;
+        color: rgba(255,255,255,0.6);
+      }
+      .attribute {
+        width: 30%;
+        padding-left: 20px;
+        > div {
+          margin-bottom: 10px;
+          color: rgba(255,255,255,0.6);
+        }
+        .evaluation {
+          li { 
+            padding-right: 6px;
+            color: $yellow;
+            font-size: 20px;
+          }
+        }
+        .tag {
+          li {
+            background: rgba(255,255,255,0.1);
+            display: inline-block;
+            padding: 10px;
+            margin-right: 4px;
+          }
+        }
+        .language {
+          .subtitle {
+            margin: 6px 0;
+          }
+          li {
+            background: rgba(255,255,255,0.1);
+            display: inline-block;
+            padding: 6px;
+            margin-right: 4px;
+          }
+        }
+        .statistic {
+          li {
+            margin-bottom: 6px;
+          }
+        }
+      }
+      h2 {
+        font-size: 16px !important;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+#main-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 220px;
+  height: 100%;
+  background: #111111;
+  overflow-y: auto;
+  z-index: 9999;
+  .logo {
+    padding: 18px 20px;
+    background: #1e1e1e;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .main-navigation {
+    background: #1e1e1e;
+    a {
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 500;
+      padding: 20px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      @include transition();
+      &:hover {
+        cursor: pointer;
+        background: rgba(255,255,255,0.05);
+      }
+    }
+    li {
+      &.active {
+        border-left: 4px solid $green;
+      }
+    }
+  }
+  .historic {
+    h2 {
+      font-size: 14px;
+      padding: 20px 0 20px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    .user {
+      display: flex;
+      flex-direction: row;
+      .pseudo {
+        width: 80%;
+        font-size: 12px;
+        color: rgba(255,255,255,0.6);
+        background: #111111;
+        @include transition();
+        img {
+          float: left;
+          width: 20%;
+        }
+        > span {
+          float: left;
+          width: 80%;
+          line-height: 2.2;
+          padding: 0 6px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          i {
+            padding-left: 4px;
+          }
+        }
+        &:hover {
+          background: #1f1f1f;
+        }
+      }
+      .friend {
+        width: 20%;
+        background: #1e1e1e;
+        border-left: 1px solid rgba(255,255,255,0.2);
+        text-align: center;
+        color: rgba(255,255,255,0.8);
+        @include transition();
+        i {
+          line-height: 1.6;
+        }
+        &:hover {
+          background: #292929; 
+        }
+      }
+      > * {
+        padding: 10px;
+      }
+    }
+    .information {
+      display: flex;
+      background: #1e1e1e;
+      .reseau {
+        margin: auto 0;
+        width: 30%;
+        padding: 10px;
+        li {
+          float: left;
+          padding: 0 8px 0 0;
+        }
+        a {
+          color: rgba(255,255,255,0.8);
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+      .copyright {
+        width: 70%;
+        font-size: 12px;
+        color: rgba(255,255,255,0.4);
+        text-align: right;
+        padding: 10px;
+        line-height: 1.4;
+      }
+    }
+  }
+}
